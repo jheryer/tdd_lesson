@@ -1,0 +1,29 @@
+@startuml
+start
+partition "set initial state" {
+  :hop count is zero;
+  :received address is empty;
+}
+partition "resolve destination" {
+  : Get IP address from provided hostname;
+  : Set IP address as destination address;
+}
+while (received address != destination address)
+  :Create Sender to send ICMP packet;
+  :Create Receiver to get ICMP resposne;
+
+  partition "get next hop" {
+    :Sender sends packet with hop count value;
+    :Reciever gets a return packet with address;
+    :return received address;
+  }
+
+  :store recieved address;
+  :increment hop count;
+
+  :calcuate time;
+endwhile
+
+stop
+
+@enduml
