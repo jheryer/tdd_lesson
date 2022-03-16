@@ -1,19 +1,19 @@
 # Route Tracer
-Today in TDD, the focus is on building an application using test doubles. This application will provide basic information on how network traffic travels from the local computer to a destination on the internet. This exercise aims to demonstrate a technique that makes  Test Driven Development easier when approaching an algorithm heavily dependent on infrastructure.
+Today in TDD, the focus is on building an application using test doubles. This application will provide basic information on how network traffic travels from the local computer to a destination on the internet. This exercise aims to demonstrate a technique that makes Test Driven Development easier when approaching an algorithm heavily dependent on infrastructure.
 
-Simplify TDD by avoiding infrastructure and framework dependenies in your test environment. Dependencies can slow your tests down or maynot be available. The practice of writing developer tests has techniques that allow us to focus on testing the code we are writing. Gain better control and visibility for the subject under test using Test Doubles. Test doubles allow us to create a fake representation of an object or function for testing purposes.
+Simplify TDD by avoiding infrastructure and framework dependencies in your test environment. Dependencies can slow your tests down or maynot be available. The practice of writing developer tests has techniques that allow us to focus on testing the code we are writing. Gain better control and visibility for the subject under test using Test Doubles. Test doubles allow us to create a fake representation of an object or function for testing purposes.
 
 Fake it until you make it.
 
-Several types of [test doubles](http://xunitpatterns.com/Test%20Double.html) are outlined in Gerard Mezeros' book "XUnit Test Patterns: Refactoring Test Code"  
-
+Gerard Mezeros' book "XUnit Test Patterns: Refactoring Test Code" outlined several types of [test doubles](http://xunitpatterns.com/Test%20Double.html).
+ 
 * [Test Stub](http://xunitpatterns.com/Test%20Stub.html): Replace actual functionality with a test-specific object that supports the indirect inputs of the subject under test
 * [Test Spy](http://xunitpatterns.com/Test%20Spy.html): Similar to the test stub but contains recording capability to be verified by a test
 * [Test Mock](http://xunitpatterns.com/Mock%20Object.html): Imitate the behavior of objects to verify logic independently of other components or dependencies.
 * [Test Fake](http://xunitpatterns.com/Fake%20Object.html): A lightweight replacement a component dependency of the subject under test.
 * [Test Dummy](http://xunitpatterns.com/Dummy%20Object.html): Object without implementation to satisfy a method signature on the subject under test
 
-This tutorial will heavily rely on test doubles as a way to test drive the application. Different languages provide toolkits that provide developers easy access to test doubles. This example will use Python's MagicMock toolkit that is part of the standard unittest module.
+This tutorial will heavily rely on test doubles to test drive the application. Different languages provide toolkits that provide developers easy access to test doubles. This example will use Python's [MagicMock](https://docs.python.org/3/library/unittest.mock.html) toolkit.
 
 ## The Requirements
 
